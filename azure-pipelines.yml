@@ -15,7 +15,7 @@ steps:
     
 - task: Maven@3
   inputs:
-    mavenPomFile: 'src/SQM/pom.xml'
+    mavenPomFile: 'src/Selenium/pom.xml'
     goals: 'package'
     options: '-B'    
 - task: Maven@3
