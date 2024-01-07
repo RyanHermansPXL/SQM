@@ -37,7 +37,7 @@ stages:
 
     - task: Maven@3
       inputs:
-        mavenPomFile: '$(system.defaultWorkingDirectory)/src/Selenium/pom.xml'
+        mavenPomFile: '/src/Selenium/pom.xml'
         goals: 'test'
         options: '-Dmaven.test.failure.ignore=true'
         publishJUnitResults: true
