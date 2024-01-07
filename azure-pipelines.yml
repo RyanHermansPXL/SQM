@@ -9,6 +9,12 @@ stages:
   jobs:
   - job: TestAPI
     steps:
+    - task: JavaToolInstaller@0
+      inputs:
+        versionSpec: '17'
+        jdkArchitectureOption: 'x64'
+        jdkSourceOption: 'PreInstalled'
+
     - task: Maven@3
       inputs:
         mavenPomFile: 'src/API/pom.xml'
@@ -19,6 +25,12 @@ stages:
 
   - job: TestSelenium
     steps:
+    - task: JavaToolInstaller@0
+      inputs:
+        versionSpec: '17'
+        jdkArchitectureOption: 'x64'
+        jdkSourceOption: 'PreInstalled'
+
     - task: Maven@3
       inputs:
         mavenPomFile: 'src/Selenium/pom.xml'
