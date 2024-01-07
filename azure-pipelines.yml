@@ -12,7 +12,17 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-
+    
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'src/SQM/pom.xml'
+    goals: 'package'
+    options: '-B'    
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'src/SQM/pom.xml'
+    goals: 'test'
+    options: '-B'
 - script: |
     java -version
     mvn -version
