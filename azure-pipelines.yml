@@ -4,25 +4,54 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: Maven@3
+stages:
+- stage: BuildAndTest
+  jobs:
+  - job: TestAPI
+    steps:
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'src/API/pom.xml'
+        goals: 'test'
+        options: '-Dmaven.test.failure.ignore=true'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
 
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
+    - job: TestAppium
+    steps:
+    - task: UseJava@1
+      inputs:
+        version: '1.8'
+        javaVersion: '8'
+        jdkArchitecture: 'x64'
 
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'src/Selenium/pom.xml' # Het pad naar pom.xml als deze zich in de root bevindt
-    goals: 'test' # Hiermee worden alleen de tests uitgevoerd
-    options: '-B' # Batch mode maakt de build output minder rommelig
-    publishJUnitResults: true # Dit zal de JUnit testresultaten publiceren
-    testResultsFiles: '**/surefire-reports/TEST-*.xml' # Het pad naar de testresultaten
+    - script: |
+        echo "Setting up Android SDK..."
+        wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+        unzip sdk-tools-linux-4333796.zip -d android-sdk
+        export ANDROID_HOME=$(pwd)/android-sdk
+        export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+        yes | sdkmanager --licenses
+        sdkmanager "platform-tools" "platforms;android-29" "build-tools;29.0.2" "emulator" "system-images;android-29;google_apis;x86"
+        echo "no" | avdmanager create avd -n testEmulator -k "system-images;android-29;google_apis;x86"
+        $ANDROID_HOME/emulator/emulator -avd testEmulator -no-audio -no-window &
+      
+    - script: |
+        echo "Installing Appium..."
+        npm install -g appium
+        npm install -g appium-doctor
+        appium-doctor
 
-- task: PublishTestResults@2
-  condition: succeededOrFailed() # Altijd publiceren, zelfs als de build mislukt
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/surefire-reports/TEST-*.xml' # Het pad naar de testresultaten
+    - script: |
+        cd src/Appium
+        npm install
+        npm test
+
+  - job: TestSelenium
+    steps:
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'src/Selenium/pom.xml'
+        goals: 'test'
+        options: '-Dmaven.test.failure.ignore=true'
+        publishJUnitResults: true
