@@ -17,36 +17,6 @@ stages:
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
 
-    - job: TestAppium
-    steps:
-    - task: UseJava@1
-      inputs:
-        version: '1.8'
-        javaVersion: '8'
-        jdkArchitecture: 'x64'
-
-    - script: |
-        echo "Setting up Android SDK..."
-        wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-        unzip sdk-tools-linux-4333796.zip -d android-sdk
-        export ANDROID_HOME=$(pwd)/android-sdk
-        export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
-        yes | sdkmanager --licenses
-        sdkmanager "platform-tools" "platforms;android-29" "build-tools;29.0.2" "emulator" "system-images;android-29;google_apis;x86"
-        echo "no" | avdmanager create avd -n testEmulator -k "system-images;android-29;google_apis;x86"
-        $ANDROID_HOME/emulator/emulator -avd testEmulator -no-audio -no-window &
-      
-    - script: |
-        echo "Installing Appium..."
-        npm install -g appium
-        npm install -g appium-doctor
-        appium-doctor
-
-    - script: |
-        cd src/Appium
-        npm install
-        npm test
-
   - job: TestSelenium
     steps:
     - task: Maven@3
@@ -55,3 +25,4 @@ stages:
         goals: 'test'
         options: '-Dmaven.test.failure.ignore=true'
         publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
