@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86df6096-96ec-4c52-90d8-47c6bafda40e" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/src/Selenium/src/main/java/SQM/web/PageObjects/inventoryObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selenium/src/main/java/SQM/web/PageObjects/inventoryObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Selenium/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Selenium/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -50,6 +51,7 @@
       <workItem from="1704630014985" duration="856000" />
       <workItem from="1704630989874" duration="33000" />
       <workItem from="1704631068086" duration="1406000" />
+      <workItem from="1704636947676" duration="1873000" />
     </task>
     <servers />
   </component>
