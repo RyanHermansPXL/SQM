@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86df6096-96ec-4c52-90d8-47c6bafda40e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/common/JSONhelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/PageObjects/BasePageObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/PageObjects/SQMPages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/PageObjects/checkoutInformationObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/PageObjects/checkoutOverviewObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/PageObjects/inventoryItemObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/PageObjects/inventoryObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/PageObjects/loginObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/PageObjects/myCartObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/utils/BrowserUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/utils/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQM/web/webConfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/error_user/ErrorUserLoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/error_user/ErrorUserLoginTestCheckoutInformationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/error_user/ErrorUserLoginTestCheckoutOverviewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/error_user/ErrorUserLoginTestInventoryItemTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/error_user/ErrorUserLoginTestInventoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/error_user/ErrorUserLoginTestMyCartObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/peformance_glitch_user/PerformanceGlitchUserLoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/peformance_glitch_user/PerformanceGlitchUserLoginTestCheckoutInformationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/peformance_glitch_user/PerformanceGlitchUserLoginTestCheckoutOverviewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/peformance_glitch_user/PerformanceGlitchUserLoginTestInventoryItemTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/peformance_glitch_user/PerformanceGlitchUserLoginTestInventoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/peformance_glitch_user/PerformanceGlitchUserLoginTestMyCartObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/problem_user/ProblemUserLoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/problem_user/ProblemUserLoginTestCheckoutInformationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/problem_user/ProblemUserLoginTestCheckoutOverviewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/problem_user/ProblemUserLoginTestInventoryItemTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/problem_user/ProblemUserLoginTestInventoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/problem_user/ProblemUserLoginTestMyCartObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/standard_user/StandardUserLoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/standard_user/StandardUserLoginTestCheckoutInformationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/standard_user/StandardUserLoginTestCheckoutOverviewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/standard_user/StandardUserLoginTestInventoryItemTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/standard_user/StandardUserLoginTestInventoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/standard_user/StandardUserLoginTestMyCartObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/visual_user/VisualUserLoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/visual_user/VisualUserLoginTestCheckoutInformationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/visual_user/VisualUserLoginTestInventoryItemTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/visual_user/VisualUserLoginTestInventoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/visual_user/VisualUserLoginTestMyCartObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SQM/visual_user/VisualUserUserLoginTestCheckoutOverviewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2acu6Ekq8eymskvxeJpmG84TB4u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/RyanH/Documents/GitHub/SQM",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86df6096-96ec-4c52-90d8-47c6bafda40e" name="Changes" comment="" />
+      <created>1704630012504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704630012504</updated>
+      <workItem from="1704630014985" duration="856000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
