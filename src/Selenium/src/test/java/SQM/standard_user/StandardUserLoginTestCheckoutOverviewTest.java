@@ -37,7 +37,7 @@ public class StandardUserLoginTestCheckoutOverviewTest {
     }
 
 
-    //Bug
+    //Check if totalprice is good
     @Test(priority = 3)
     public void testTotalPrice() {
         try {

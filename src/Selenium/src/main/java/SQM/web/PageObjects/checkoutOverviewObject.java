@@ -43,9 +43,9 @@ public class checkoutOverviewObject extends BasePageObject{
         return totalItemPrice;
     }
 
-    //This returns the label 'Total"
+    //This returns the label 'Total'
     public double returnForCheckTotalPrice(){
-        WebElement elementLabelTotalItemPrice = waitForElementPresent(By.className("summary_info_label summary_total_label"), Duration.ofMillis(500));
+        WebElement elementLabelTotalItemPrice = waitForElementPresent(By.cssSelector("div.summary_info_label.summary_total_label"), Duration.ofMillis(500));
         return Double.parseDouble(elementLabelTotalItemPrice.getText().split("\\$")[1]);
 
     }

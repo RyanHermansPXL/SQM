@@ -4,13 +4,16 @@ import SQM.web.PageObjects.SQMPages;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 
 @Test(groups = "group1")
 public class StandardUserLoginTest {
     SQMPages pages = SQMPages.Init();
     long startTime;
     long endTime;
+
 
     @BeforeClass
     public void setUp() {
@@ -19,6 +22,15 @@ public class StandardUserLoginTest {
         pages.loginObject.navigateTo();
     }
 
+    @DataProvider(name = "loginData")
+    public Object[][] getData(){
+        return new Object[][]{
+                {"standard_user", "secret_sauce"},
+                {"locked_out_user", "secret_sauce"},
+        };
+    }
+
+    
     //Check if StandardUser is logged in
     @Test(priority = 3)
     public void testStandardUserCanLogin(){

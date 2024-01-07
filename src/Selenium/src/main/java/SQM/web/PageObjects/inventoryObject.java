@@ -80,7 +80,7 @@ public class inventoryObject extends BasePageObject{
 
     //We klikken op de titel van de backpack product
     public void clickOnItemTitleBackpack(){
-        WebElement backpackElement = waitForElementPresent(By.xpath("//div[@class='inventory_item_name' and text()='Sauce Labs Backpack']"), Duration.ofMillis(1000));
+        WebElement backpackElement = waitForElementPresent(By.cssSelector(".inventory_item_name"), Duration.ofMillis(1000));
         backpackElement.click();
     }
 
