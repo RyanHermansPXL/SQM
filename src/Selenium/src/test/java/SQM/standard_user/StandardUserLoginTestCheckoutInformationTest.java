@@ -6,7 +6,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-@Test(dependsOnGroups = "group1")
+
 public class StandardUserLoginTestCheckoutInformationTest {
     SQMPages pages = SQMPages.Init();
     long startTime;
