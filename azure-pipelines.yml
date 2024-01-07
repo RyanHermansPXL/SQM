@@ -1,0 +1,38 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: Maven@3
+
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '11'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
+    
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'src/SQM/pom.xml'
+    goals: 'package'
+    options: '-B'    
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'src/SQM/pom.xml'
+    goals: 'test'
+    options: '-B'
+- script: |
+    java -version
+    mvn -version
+    mvn -B -f src/Selenium/pom.xml
+  displayName: 'Display Java and Maven versions'
+
+- script: |
+    mvn -B package
+  displayName: 'Build with Maven'
+
+- script: |
+    mvn test
+  displayName: 'Run Maven tests'
