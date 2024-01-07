@@ -14,16 +14,17 @@ stages:
         versionSpec: '17'
         jdkArchitectureOption: 'x64'
         jdkSourceOption: 'PreInstalled'
-      workingDirectory: '$(System.DefaultWorkingDirectory)'
+      
 
     - task: Maven@3
       inputs:
+        
         mavenPomFile: 'src/API/pom.xml'
         goals: 'test'
         options: '-Dmaven.test.failure.ignore=true'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
-      workingDirectory: '$(System.DefaultWorkingDirectory)'
+      
 
   - job: TestSelenium
     steps:
@@ -32,13 +33,13 @@ stages:
         versionSpec: '17'
         jdkArchitectureOption: 'x64'
         jdkSourceOption: 'PreInstalled'
-      workingDirectory: '$(System.DefaultWorkingDirectory)'
+      
 
     - task: Maven@3
       inputs:
-        mavenPomFile: 'src/Selenium/pom.xml'
+        mavenPomFile: '$(system.defaultWorkingDirectory)/src/Selenium/pom.xml'
         goals: 'test'
         options: '-Dmaven.test.failure.ignore=true'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
-      workingDirectory: '$(System.DefaultWorkingDirectory)'
+     
